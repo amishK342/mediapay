@@ -1,0 +1,16 @@
+{
+  "detected_at": 1775036185,
+  "setup": [
+    "cd frontend && npm ci"
+  ],
+  "test": [
+    "cd frontend && npm test"
+  ],
+  "build": [
+    "cd frontend && npm run build"
+  ],
+  "deploy": [],
+  "notes": [
+    "Detected Node project (package.json)."
+  ]
+}

@@ -36,3 +36,24 @@ Codex/agents MUST follow these rules when operating in this repository.
 ## Automation modes (conceptual)
 - Default: open PRs for human review (do not auto-merge).
 - Full-auto (if enabled by Verity UI): may open PRs and trigger deploy workflows, but still must respect GitHub Environment approvals and safety guardrails.
+
+<!-- verity:agents-structure:start -->
+## Repository Structure
+
+**Project Type**: `MONO`
+
+**Stack**:
+- Frontend: `react`
+- Backend: `express`
+
+**Code Locations**:
+- Frontend code: `frontend`
+- Backend code: `backend`
+- Shared code: `scripts`
+
+**Routing Guidance**:
+- This is a monorepo containing both frontend and backend code.
+- UI/styling changes → look in frontend paths
+- API/data changes → look in backend paths
+- Full-stack features may require changes in both
+<!-- verity:agents-structure:end -->

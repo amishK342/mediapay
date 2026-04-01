@@ -1,21 +1,22 @@
 version: 1
 verity:
-  project_id: "d8dd2a08-f2b9-4cfd-8ac1-3ac891215342"
-  callback_url: "https://localhost:3001/api/callbacks/github-actions"
-  bootstrap_version: "v1"
-
+  project_id: d8dd2a08-f2b9-4cfd-8ac1-3ac891215342
+  callback_url: https://localhost:3001/api/callbacks/github-actions
+  bootstrap_version: v1
 commands:
-  setup: []
-  test: []
-  build: []
+  setup:
+  - cd frontend && npm ci
+  test:
+  - cd frontend && npm test
+  build:
+  - cd frontend && npm run build
   deploy: []
-
 policies:
   pr_review:
     enabled: true
-    label_required: "verity:agent"
+    label_required: verity:agent
   openai_guardrail:
     enabled: true
   documentation:
     auto_mode: true
-    handoff_file: "docs/AI_HANDOFF.md"
+    handoff_file: docs/AI_HANDOFF.md
